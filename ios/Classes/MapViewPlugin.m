@@ -105,6 +105,12 @@
     } else if ([@"getCenter" isEqualToString:call.method]) {
         CLLocationCoordinate2D location = self.mapViewController.centerLocation;
         result(@{@"latitude": @(location.latitude), @"longitude": @(location.longitude)});
+    }else if ([@"farLeft" isEqualToString:call.method]) {
+        CLLocationCoordinate2D location = self.mapViewController.farLeft;
+        result(@{@"latitude": @(location.latitude), @"longitude": @(location.longitude)});
+    }else if ([@"farRight" isEqualToString:call.method]) {
+        CLLocationCoordinate2D location = self.mapViewController.farRight;
+        result(@{@"latitude": @(location.latitude), @"longitude": @(location.longitude)});
     } else if ([@"getZoomLevel" isEqualToString:call.method]) {
         result(@(self.mapViewController.zoomLevel));
     } else if ([@"dismiss" isEqualToString:call.method]) {
