@@ -381,12 +381,12 @@
 - (CLLocationCoordinate2D)farLeft {
     GMSVisibleRegion region = self.mapView.projection.visibleRegion;
     GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc]initWithRegion:region];
-    return bounds.farLeft;
+    return bounds.northEast;
 }
 - (CLLocationCoordinate2D)farRight {
     GMSVisibleRegion region = self.mapView.projection.visibleRegion;
     GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc]initWithRegion:region];
-    return bounds.farRight;
+    return bounds.southWest;
 }
 
 
