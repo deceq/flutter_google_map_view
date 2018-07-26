@@ -200,6 +200,16 @@ class MapView {
     return new Location(locationMap["latitude"], locationMap["longitude"]);
   }
 
+  Future<Location> get farLeft async {
+    Map locationMap = await _channel.invokeMethod("farLeft");
+    return new Location(locationMap["latitude"], locationMap["longitude"]);
+  }
+
+  Future<Location> get farRight async {
+    Map locationMap = await _channel.invokeMethod("farRight");
+    return new Location(locationMap["latitude"], locationMap["longitude"]);
+  }
+
   Future<double> get zoomLevel async {
     return await _channel.invokeMethod("getZoomLevel");
   }
