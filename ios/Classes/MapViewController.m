@@ -378,6 +378,18 @@
     return self.mapView.camera.zoom;
 }
 
+- (CLLocationCoordinate2D)farLeft {
+    GMSVisibleRegion region = self.mapView.projection.visibleRegion;
+    GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc]initWithRegion:region];
+    return bounds.farLeft;
+}
+- (CLLocationCoordinate2D)farRight {
+    GMSVisibleRegion region = self.mapView.projection.visibleRegion;
+    GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc]initWithRegion:region];
+    return bounds.farRight;
+}
+
+
 - (NSArray *)visibleMarkers {
     GMSVisibleRegion region = self.mapView.projection.visibleRegion;
     GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc]initWithRegion:region];
