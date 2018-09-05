@@ -51,8 +51,8 @@
 
 @property (readonly) float zoomLevel;
 @property (readonly) CLLocationCoordinate2D centerLocation;
-@property (readonly) CLLocationCoordinate2D topLeft;
-@property (readonly) CLLocationCoordinate2D bottomRight;
+@property (readonly) CLLocationCoordinate2D farLeft;
+@property (readonly) CLLocationCoordinate2D farRight;
 
 
 @end
