@@ -378,15 +378,15 @@
     return self.mapView.camera.zoom;
 }
 
-- (CLLocationCoordinate2D)farLeft {
+- (CLLocationCoordinate2D)topLeft {
     GMSVisibleRegion region = self.mapView.projection.visibleRegion;
     GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc]initWithRegion:region];
-    return bounds.northEast;
+    return bounds.northWest;
 }
-- (CLLocationCoordinate2D)farRight {
+- (CLLocationCoordinate2D)bottomRight {
     GMSVisibleRegion region = self.mapView.projection.visibleRegion;
     GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc]initWithRegion:region];
-    return bounds.southWest;
+    return bounds.southEast;
 }
 
 

@@ -200,13 +200,13 @@ class MapView {
     return new Location(locationMap["latitude"], locationMap["longitude"]);
   }
 
-  Future<Location> get farLeft async {
-    Map locationMap = await _channel.invokeMethod("farLeft");
+  Future<Location> get topLeft async {
+    Map locationMap = await _channel.invokeMethod("topLeft");
     return new Location(locationMap["latitude"], locationMap["longitude"]);
   }
 
-  Future<Location> get farRight async {
-    Map locationMap = await _channel.invokeMethod("farRight");
+  Future<Location> get bottomRight async {
+    Map locationMap = await _channel.invokeMethod("bottomRight");
     return new Location(locationMap["latitude"], locationMap["longitude"]);
   }
 
